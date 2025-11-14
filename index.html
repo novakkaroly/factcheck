@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI és Tényellenőrzés: Útmutató Pedagógusoknak</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter betűtípus -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Alap betűtípus beállítása */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Aktív navigációs gomb stílusa */
+        .nav-active {
+            background-color: #2563eb; /* blue-600 */
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        /* Tartalmi szekciók alapértelmezetten rejtve */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        /* Aktív tartalmi szekció */
+        .content-active {
+            display: block;
+        }
+        /* Animáció */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 leading-relaxed">
+
+    <!-- Fejléc -->
+    <header class="bg-white shadow-md p-6 md:p-8 text-center sticky top-0 z-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-2">AI a Tényellenőrzés Pedagógiájában</h1>
+        <p class="text-lg md:text-xl text-gray-600">Interaktív útmutató pedagógusok számára</p>
+    </header>
+
+    <!-- Navigáció -->
+    <nav class="bg-blue-50 p-4 shadow-inner sticky top-[108px] md:top-[128px] z-10">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-2 md:gap-4">
+            <button onclick="showSection('bevezetes', this)" class="nav-button nav-active py-2 px-4 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:bg-blue-200">Bevezetés</button>
+            <button onclick="showSection('mukodes', this)" class="nav-button py-2 px-4 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:bg-blue-200">Hogyan működik?</button>
+            <button onclick="showSection('eszkoztar', this)" class="nav-button py-2 px-4 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:bg-blue-200">Pedagógiai Eszöztár</button>
+            <button onclick="showSection('kockazatok', this)" class="nav-button py-2 px-4 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:bg-blue-200">Kritikus Kockázatok</button>
+            <button onclick="showSection('oratervek', this)" class="nav-button py-2 px-4 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:bg-blue-200">Óratervek és Módszerek</button>
+        </div>
+    </nav>
+
+    <!-- Fő tartalom -->
+    <main class="max-w-5xl mx-auto p-4 md:p-8">
+        
+        <!-- Szekció: Bevezetés -->
+        <div id="bevezetes-content" class="content-section content-active bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Bevezetés: A Pedagógus Mint Kritikus Kurátor</h2>
+            <p class="mb-4 text-gray-700">A jelenkor információs ökoszisztémáját kettős kihívás határozza meg:</p>
+            <ul class="list-disc list-inside mb-4 space-y-2 text-gray-700">
+                <li><strong>AI-generált dezinformáció:</strong> A valósághű szövegek és deepfake videók aláássák a valóságba vetett közös hitünket.</li>
+                <li><strong>AI-alapú tényellenőrzés:</strong> Ugyanakkor az AI kínálja a leghatékonyabb új eszközöket ezen hamisítványok felismerésére is.</li>
+            </ul>
+            <p class="mb-4 text-gray-700">A pedagógusok a médiaműveltség fejlesztésének kulcsszereplőivé válnak. A kritikus gondolkodás ma már nem luxus, hanem alapvető túlélési készség.</p>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <h3 class="font-bold text-blue-800">A H-AI-H Modell (Human-AI-Human)</h3>
+                <p class="text-blue-900 mt-2">Ez a jelentés egy emberközpontú modellt javasol:</p>
+                <ol class="list-decimal list-inside ml-4 mt-2">
+                    <li><strong>Human (Ember):</strong> A folyamat emberi kérdésfeltevéssel kezdődik.</li>
+                    <li><strong>AI (MI):</strong> Az AI-t eszközként használjuk adatfeldolgozásra.</li>
+                    <li><strong>Human (Ember):</strong> A folyamat mindig emberi reflexióval és kritikai értékeléssel zárul.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Szekció: Hogyan működik? -->
+        <div id="mukodes-content" class="content-section bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Az AI-Alapú Tényellenőrzés Működési Elvei</h2>
+            <p class="mb-6 text-gray-700">Az AI-alapú tényellenőrzés két fő technológiai pilléren nyugszik: a szövegek elemzésén és a vizuális tartalmak hitelesítésén.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Szövegelemzés -->
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">1. Szövegek és Narratívák Elemzése (NLP)</h3>
+                    <p class="mb-3 text-gray-700">A <strong>Természetes Nyelvfeldolgozás (NLP)</strong> az AI azon ága, amely az emberi nyelv elemzésére képes. A tényellenőrző rendszerek az NLP elemző képességeire támaszkodnak.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Dezinformációs mintázatok:</strong> Azonosítja az álhírekre jellemző gyanús szövegstruktúrákat (pl. túlzott érzelmi töltet).</li>
+                        <li><strong>Hiteltelen források:</strong> Összeveti a forrást az ismert dezinformációs oldalak adatbázisaival.</li>
+                        <li><strong>Automatizált állítás-kinyerés:</strong> Folyamatosan pásztázza a hírfolyamokat új, ellenőrzésre váró állításokért.</li>
+                    </ul>
+                </div>
+                
+                <!-- Vizuális elemzés -->
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">2. Vizuális Valóság Megkérdőjelezése (Deepfake Detekció)</h3>
+                    <p class="mb-3 text-gray-700">A <strong>Deepfake</strong> olyan AI által manipulált videó vagy kép, amely az emberi szem számára szinte észrevehetetlenül hamis. Az AI-detektorok finom anomáliákat keresnek.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Képi inkonzisztenciák:</strong> Természetellenes pislogás, elmosódott bőrszövet, hibás árnyékok.</li>
+                        <li><strong>Frame-ről frame-re elemzés:</strong> Képkockáról képkockára keres következetlenségeket.</li>
+                        <li><strong>Audiovizuális szinkron:</strong> Ellenőrzi, hogy a hang (pl. klónozott hang) illeszkedik-e a szájmozgáshoz.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Szekció: Eszköztár -->
+        <div id="eszkoztar-content" class="content-section bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Pedagógiai Eszöztár: AI-Alkalmazások a Tanteremben</h2>
+            <p class="mb-6 text-gray-700">Konkrét, az osztályteremben is bevethető eszközök, amelyek áthidalják a szakadékot a professzionális tényellenőrzés és az oktatási valóság között.</p>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800">Perplexity AI</h3>
+                    <p class="text-sm text-gray-600 mb-2">AI-válaszmotor forrásokkal</p>
+                    <p class="text-gray-700"><strong>Pedagógiai érték:</strong> Nemcsak válaszol, de minden állításához kattintható, valós idejű forrásokat rendel. Tökéletes a "laterális olvasás" és a forráskritika azonnali gyakorlására.</p>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 shadow-sm">
+                    <h3 class="text-xl font-bold text-blue-800">InVid-WeVerify Bővítmény</h3>
+                    <p class="text-sm text-gray-600 mb-2">Multimédiás forenzikus eszköz</p>
+                    <p class="text-gray-700"><strong>Pedagógiai érték:</strong> A vizuális dezinformáció "svájci bicskája". Lehetővé teszi videók képkockákra bontását és fordított képkeresés futtatását. <strong class="text-green-700">Magyar nyelven is elérhető!</strong></p>
+                </div>
+
+                <div class="bg-green-50 border border-green-200 rounded-lg p-5 shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800">Lakmusz.hu</h3>
+                    <p class="text-sm text-gray-600 mb-2">Hazai tényellenőrző portál</p>
+                    <p class="text-gray-700"><strong>Pedagógiai érték:</strong> Aktuális, magyar nyelvű tényellenőrző cikkek, amelyek kiváló esettanulmányok egy-egy ellenőrzési folyamat bemutatására. A "Médiatudatosság" aloldaluk konkrét útmutatókat tartalmaz.</p>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-800">GPTZero Citation Checker</h3>
+                    <p class="text-sm text-gray-600 mb-2">Tudományos hivatkozás-ellenőrző</p>
+                    <p class="text-gray-700"><strong>Pedagógiai érték:</strong> Kifejezetten diákdolgozatok bibliográfiáinak ellenőrzésére tervezték. Kiszűri a kitalált, "hallucinált", nem létező forrásokat.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Szekció: Kockázatok -->
+        <div id="kockazatok-content" class="content-section bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-red-700 mb-4 pb-2 border-b-2 border-red-200">Kritikus Kockázatok és Korlátok</h2>
+            <p class="mb-6 text-gray-700">Az AI-ba vetett vak hit veszélyesebb lehet, mint maguk az álhírek. A pedagógusoknak nemcsak az eszközök használatára, hanem azok korlátaira is fel kell készíteniük a diákokat.</p>
+
+            <div class="space-y-5">
+                <!-- Kockázat: Hallucináció -->
+                <div class="border-l-4 border-red-500 bg-red-50 p-5 rounded-r-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-red-800">1. AI Hallucináció és Kitalált Források</h3>
+                    <p class="mt-2 text-gray-700">A nagy nyelvi modellek (LLM-ek) magabiztosan közölnek tényként valótlan információkat vagy kitalált hivatkozásokat. A modell célja nem az <span class="font-semibold">igazság</span> közlése, hanem a <span class="font-semibold">hihetőség</span> látszatának megteremtése.</p>
+                    <p class="mt-3 font-semibold text-red-900"><strong>Pedagógiai válasz:</strong> Kötelező "Forrásvalidálási" lépés bevezetése. Az AI által generált állítás alapértelmezetten "megbízhatatlan", amíg azt külső, hiteles forrás meg nem erősíti.</p>
+                </div>
+
+                <!-- Kockázat: Torzítás -->
+                <div class="border-l-4 border-yellow-500 bg-yellow-50 p-5 rounded-r-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-yellow-800">2. Algoritmikus Torzítás (Bias)</h3>
+                    <p class="mt-2 text-gray-700">Az AI-modellek azokon az adatokon tanulnak, amelyeket az emberek betáplálnak. Ha a tanító adathalmaz elfogult, az AI nemcsak megtanulja, de gyakran <span class="font-semibold">felerősíti</span> ezeket a torzításokat.</p>
+                    <p class="mt-3 font-semibold text-yellow-900"><strong>Pedagógiai válasz:</strong> Az AI "semlegességének" megkérdőjelezése órai vita keretében. Annak vizsgálata, hogy *ki* készítette az AI-t és *milyen adatokon* tanították.</p>
+                </div>
+
+                <!-- Kockázat: AI Detektorok -->
+                <div class="border-l-4 border-red-700 bg-red-100 p-5 rounded-r-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-red-900">3. A PEDAGÓGIAI CSAPDA: Az AI-Szövegdetektorok Megbízhatatlansága</h3>
+                    <p class="mt-2 text-gray-700">Ezek az eszközök (pl. Turnitin AI-detektora) rendkívül magas "Hamis Pozitív" (False Positive) aránnyal működnek: <strong class="text-red-800">teljesen ember által írt szövegeket jelölnek meg tévesen AI-generáltként.</strong></p>
+                    <p class="mt-2 text-gray-700">Kutatások szerint aránytalanul büntetik a nem angol anyanyelvű diákokat, akiknek írásstílusa jobban hasonlít az AI statisztikai mintázataira.</p>
+                    <p class="mt-3 font-bold text-red-900"><strong>Pedagógiai és etikai ajánlás: Ezen eszközök használata a diákok munkájának értékelésére szigorúan kerülendő!</strong></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Szekció: Óratervek -->
+        <div id="oratervek-content" class="content-section bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-green-700 mb-4 pb-2 border-b-2 border-green-200">Óratervek és Módszertani Javaslatok</h2>
+            <p class="mb-6 text-gray-700">A kockázatok ismeretében a feladat nem az AI tiltása, hanem a felelős, kritikus és etikailag megalapozott használat kereteinek kijelölése.</p>
+
+            <div class="space-y-5">
+                <!-- Óraterv 1 -->
+                <div class="bg-green-50 border border-green-200 rounded-lg p-5 shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800">1. Módszer: A "Laterális Olvasás" (Lateral Reading) Gyakorlása</h3>
+                    <p class="mt-2 text-gray-700">A professzionális tényellenőrzők technikája. Ahelyett, hogy egy gyanús weboldalon maradnának, azonnal elhagyják azt, és új böngészőfüleken ellenőrzik magának a <span class="font-semibold">forrásnak</span> (a szerzőnek, a szervezetnek) a hitelességét.</p>
+                    <p class="mt-2 text-gray-700"><strong>Alkalmazás AI-val:</strong> A diákok egy AI (pl. Perplexity) által generált, forrásokkal teli szöveget kapnak. Feladatuk, hogy laterális olvasással ellenőrizzék magukat az AI által felhasznált forrásokat.</p>
+                </div>
+                
+                <!-- Óraterv 2 -->
+                <div class="bg-green-50 border border-green-200 rounded-lg p-5 shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800">2. Óraterv: "Deepfake Detektívek"</h3>
+                    <p class="mt-2 text-gray-700"><strong>Cél:</strong> A vizuális dezinformáció felismerési készségeinek fejlesztése.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700 ml-4">
+                        <li><strong>Bevezetés:</strong> Egyértelműen hamis videó közös elemzése ("Honnan tudjuk?").</li>
+                        <li><strong>Elemzés:</strong> A deepfake finomabb jeleinek (pl. furcsa pislogás) megbeszélése.</li>
+                        <li><strong>Gyakorlat (Eszközzel):</strong> Gyanús videók ellenőrzése az <strong class="text-green-800">InVid-WeVerify</strong> (magyar nyelvű) bővítménnyel, a videó eredeti forrásának felkutatása fordított képkereséssel.</li>
+                    </ul>
+                </div>
+
+                <!-- Óraterv 3 -->
+                <div class="bg-green-50 border border-green-200 rounded-lg p-5 shadow-sm">
+                    <h3 class="text-xl font-bold text-green-800">3. Óraterv: "Javítsd ki az AI-t!" (AI Hallucináció Vadászat)</h3>
+                    <p class="mt-2 text-gray-700"><strong>Cél:</strong> Annak demonstrálása, hogy az AI megbízhatatlan forrás, és a forrásellenőrzés kritikus fontosságú.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700 ml-4">
+                        <li><strong>Feladat:</strong> A diákok megkérnek egy AI-t (pl. ChatGPT), hogy írjon egy rövid összefoglalót egy témáról, tudományos hivatkozásokkal.</li>
+                        <li><strong>Ellenőrzés:</strong> A diákok "tényellenőrző" szerepet felvéve, egyesével ellenőrzik a kapott hivatkozásokat (pl. Google Scholar, GPTZero Citation Checker segítségével).</li>
+                        <li><strong>Reflexió:</strong> Hány forrás volt valós? Hány volt kitalált ("hallucinált")?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Lábléc -->
+    <footer class="text-center text-sm text-gray-500 mt-8 pb-6">
+        <p>Ez az interaktív oldal a "AI Tényellenőrzés Pedagógusoknak" c. dokumentum alapján készült.</p>
+        <p>&copy; 2025 - Interaktív Pedagógiai Útmutató</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Alapértelmezett szekció beállítása (bár a CSS és HTML már kezeli, ez extra biztosíték)
+        document.getElementById('bevezetes-content').style.display = 'block';
+
+        function showSection(sectionId, clickedButton) {
+            // 1. Összes tartalmi szekció elrejtése
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // 2. Összes gomb 'nav-active' osztályának eltávolítása
+            const buttons = document.querySelectorAll('.nav-button');
+            buttons.forEach(button => {
+                button.classList.remove('nav-active');
+            });
+
+            // 3. A cél szekció megjelenítése
+            const targetSection = document.getElementById(sectionId + '-content');
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+
+            // 4. Az aktív stílus hozzáadása a kattintott gombhoz
+            if (clickedButton) {
+                clickedButton.classList.add('nav-active');
+            }
+            
+            // Opcionális: görgessen a tartalom tetejére, ha mobilon van
+            if (window.innerWidth < 768) {
+                const mainContent = document.querySelector('main');
+                mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+
+</body>
+</html>
